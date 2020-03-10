@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		32C466722417FB1100C3488E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C466712417FB1100C3488E /* AppDelegate.swift */; };
-		32C466762417FB1100C3488E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C466752417FB1100C3488E /* ViewController.swift */; };
+		32C466762417FB1100C3488E /* HumanListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C466752417FB1100C3488E /* HumanListTableViewController.swift */; };
 		32C4667B2417FB1200C3488E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C4667A2417FB1200C3488E /* Assets.xcassets */; };
 		32C4667E2417FB1200C3488E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C4667C2417FB1200C3488E /* LaunchScreen.storyboard */; };
+		32C466862418374500C3488E /* HumanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C466852418374500C3488E /* HumanListViewModel.swift */; };
+		32C46688241838B200C3488E /* HumanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C46687241838B200C3488E /* HumanTableViewCell.swift */; };
+		32C4668A241838FD00C3488E /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C46689241838FD00C3488E /* Human.swift */; };
 		9C31DF6D907BFB723C9BDE0D /* Pods_SkeletonTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490D5C85408D6E8C03460D3B /* Pods_SkeletonTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,10 +21,13 @@
 		323A5D7BEFD6729D030A5870 /* Pods-SkeletonTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkeletonTableView.release.xcconfig"; path = "Target Support Files/Pods-SkeletonTableView/Pods-SkeletonTableView.release.xcconfig"; sourceTree = "<group>"; };
 		32C4666E2417FB1100C3488E /* SkeletonTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkeletonTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C466712417FB1100C3488E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		32C466752417FB1100C3488E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32C466752417FB1100C3488E /* HumanListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanListTableViewController.swift; sourceTree = "<group>"; };
 		32C4667A2417FB1200C3488E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32C4667D2417FB1200C3488E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32C4667F2417FB1200C3488E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C466852418374500C3488E /* HumanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanListViewModel.swift; sourceTree = "<group>"; };
+		32C46687241838B200C3488E /* HumanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanTableViewCell.swift; sourceTree = "<group>"; };
+		32C46689241838FD00C3488E /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		490D5C85408D6E8C03460D3B /* Pods_SkeletonTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkeletonTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EED325469B7E25BB0B66A0 /* Pods-SkeletonTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkeletonTableView.debug.xcconfig"; path = "Target Support Files/Pods-SkeletonTableView/Pods-SkeletonTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,10 +75,13 @@
 			isa = PBXGroup;
 			children = (
 				32C466712417FB1100C3488E /* AppDelegate.swift */,
-				32C466752417FB1100C3488E /* ViewController.swift */,
+				32C466752417FB1100C3488E /* HumanListTableViewController.swift */,
 				32C4667A2417FB1200C3488E /* Assets.xcassets */,
 				32C4667C2417FB1200C3488E /* LaunchScreen.storyboard */,
 				32C4667F2417FB1200C3488E /* Info.plist */,
+				32C466852418374500C3488E /* HumanListViewModel.swift */,
+				32C46687241838B200C3488E /* HumanTableViewCell.swift */,
+				32C46689241838FD00C3488E /* Human.swift */,
 			);
 			path = SkeletonTableView;
 			sourceTree = "<group>";
@@ -199,8 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32C466762417FB1100C3488E /* ViewController.swift in Sources */,
+				32C466762417FB1100C3488E /* HumanListTableViewController.swift in Sources */,
 				32C466722417FB1100C3488E /* AppDelegate.swift in Sources */,
+				32C4668A241838FD00C3488E /* Human.swift in Sources */,
+				32C466862418374500C3488E /* HumanListViewModel.swift in Sources */,
+				32C46688241838B200C3488E /* HumanTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
