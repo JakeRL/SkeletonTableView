@@ -24,7 +24,7 @@ class HumanListViewModel {
         humans = nil
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.humans = [Human(name: "Bob", funFact: "Likes tomatoes"), Human(name: "Sally", funFact: "Hates tomatoes")]
+            self.humans = Array(repeating: Human(name: "Bob", funFact: "Likes tomatoes"), count: 100)
         }
     }
 

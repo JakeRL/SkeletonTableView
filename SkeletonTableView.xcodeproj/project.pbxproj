@@ -14,6 +14,7 @@
 		32C466862418374500C3488E /* HumanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C466852418374500C3488E /* HumanListViewModel.swift */; };
 		32C46688241838B200C3488E /* HumanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C46687241838B200C3488E /* HumanTableViewCell.swift */; };
 		32C4668A241838FD00C3488E /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C46689241838FD00C3488E /* Human.swift */; };
+		32C4668C241849DD00C3488E /* HumanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C4668B241849DD00C3488E /* HumanTableViewCell.xib */; };
 		9C31DF6D907BFB723C9BDE0D /* Pods_SkeletonTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490D5C85408D6E8C03460D3B /* Pods_SkeletonTableView.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		32C466852418374500C3488E /* HumanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanListViewModel.swift; sourceTree = "<group>"; };
 		32C46687241838B200C3488E /* HumanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanTableViewCell.swift; sourceTree = "<group>"; };
 		32C46689241838FD00C3488E /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		32C4668B241849DD00C3488E /* HumanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HumanTableViewCell.xib; sourceTree = "<group>"; };
 		490D5C85408D6E8C03460D3B /* Pods_SkeletonTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkeletonTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EED325469B7E25BB0B66A0 /* Pods-SkeletonTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkeletonTableView.debug.xcconfig"; path = "Target Support Files/Pods-SkeletonTableView/Pods-SkeletonTableView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 				32C466852418374500C3488E /* HumanListViewModel.swift */,
 				32C46687241838B200C3488E /* HumanTableViewCell.swift */,
 				32C46689241838FD00C3488E /* Human.swift */,
+				32C4668B241849DD00C3488E /* HumanTableViewCell.xib */,
 			);
 			path = SkeletonTableView;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C4667E2417FB1200C3488E /* LaunchScreen.storyboard in Resources */,
+				32C4668C241849DD00C3488E /* HumanTableViewCell.xib in Resources */,
 				32C4667B2417FB1200C3488E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

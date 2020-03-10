@@ -16,13 +16,11 @@ class HumanTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
 
-        isSkeletonable = true
-        textLabel?.isSkeletonable = true
-        detailTextLabel?.isSkeletonable = true
-        imageView?.isSkeletonable = true
+        commonInit()
     }
 
     func configure(withSkeleton skeleton: Human) -> Self {
+        imageView?.image = .actions
         textLabel?.text = skeleton.name
         detailTextLabel?.text = skeleton.funFact
 
@@ -30,6 +28,15 @@ class HumanTableViewCell: UITableViewCell {
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+
+        commonInit()
+    }
+
+    func commonInit() {
+        isSkeletonable = true
+        textLabel?.isSkeletonable = true
+        detailTextLabel?.isSkeletonable = true
+        imageView?.isSkeletonable = true
     }
 }

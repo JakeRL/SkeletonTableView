@@ -10,6 +10,20 @@ class HumanListTableViewController: UITableViewController, SkeletonTableViewData
         humanListViewModel.start()
     }()
 
+    var showingSkeleton: Bool = false {
+        didSet {
+            if oldValue == showingSkeleton {
+                return
+            }
+
+            if showingSkeleton {
+                tableView.showSkeleton()
+            } else {
+                tableView.hideSkeleton()
+            }
+        }
+    }
+
     init(humanListViewModel: HumanListViewModel) {
         self.humanListViewModel = humanListViewModel
 
@@ -45,15 +59,9 @@ class HumanListTableViewController: UITableViewController, SkeletonTableViewData
     }
 
     func viewModel(_ viewModel: HumanListViewModel, didUpdateHumans humans: [Human]?) {
-        if humans != nil {
-            tableView.hideSkeleton()
-        }
+        showingSkeleton = humans == nil
 
         tableView.reloadData()
-
-        if humans == nil {
-            tableView.showSkeleton()
-        }
     }
 
     override func viewDidLayoutSubviews() {
