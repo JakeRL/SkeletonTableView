@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var window: UIWindow? = UIWindow()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window?.rootViewController = UINavigationController(rootViewController: HumanListTableViewController(humanListViewModel: .init()))
+        window?.rootViewController = UINavigationController(rootViewController: HumanListTableViewController(viewModel: .init()))
         window?.makeKeyAndVisible()
 
         return true

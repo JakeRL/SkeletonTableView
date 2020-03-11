@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HumanTableViewCell: UITableViewCell {
+class HumanTableViewCell: UITableViewCell, SkeletonCell {
 
     static let identifier = "HumanCell"
 

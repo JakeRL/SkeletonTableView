@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HumanListViewModel {
+class HumanListViewModel: SkeletonListViewModel {
 
     var loadingData: Bool { humans == nil }
 
