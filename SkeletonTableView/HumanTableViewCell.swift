@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class HumanTableViewCell: UITableViewCell, SkeletonCell {
+    typealias Model = Human
 
     static let identifier = "HumanCell"
 
@@ -19,10 +20,10 @@ class HumanTableViewCell: UITableViewCell, SkeletonCell {
         commonInit()
     }
 
-    func configure(withSkeleton skeleton: Human) -> Self {
+    func configure(model: Human) -> Self {
         imageView?.image = .actions
-        textLabel?.text = skeleton.name
-        detailTextLabel?.text = skeleton.funFact
+        textLabel?.text = model.name
+        detailTextLabel?.text = model.funFact
 
         return self
     }

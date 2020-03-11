@@ -28,7 +28,7 @@ class HumanListViewModel: SkeletonListViewModel {
         }
     }
 
-    func human(atIndexPath indexPath: IndexPath) -> Human {
+    func model(atIndexPath indexPath: IndexPath) -> Human {
         guard let humans = self.humans, indexPath.row < humans.count else {
             return .skeleton
         }

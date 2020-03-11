@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SkeletonView
 
-class SkeletonableTableViewController<Cell: SkeletonCell, ViewModel: SkeletonListViewModel>: UITableViewController, SkeletonTableViewDataSource {
+class SkeletonableTableViewController<Cell: SkeletonCell, ViewModel: SkeletonListViewModel>: UITableViewController, SkeletonTableViewDataSource where Cell.Model == ViewModel.Model {
 
     let viewModel: ViewModel
 
@@ -47,7 +47,7 @@ class SkeletonableTableViewController<Cell: SkeletonCell, ViewModel: SkeletonLis
 
         tableView.isSkeletonable = true
 
-        tableView.register(HumanTableViewCell.self, forCellReuseIdentifier: HumanTableViewCell.identifier)
+        tableView.register(Cell.self, forCellReuseIdentifier: Cell.identifier)
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
@@ -57,6 +57,14 @@ class SkeletonableTableViewController<Cell: SkeletonCell, ViewModel: SkeletonLis
         super.viewDidLayoutSubviews()
 
         _ = start
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: Cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier) as! Cell
+
+        let model = viewModel.model(atIndexPath: indexPath)
+
+        return cell.configure(model: model)
     }
 
     func numSections(in collectionSkeletonView: UITableView) -> Int {

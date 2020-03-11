@@ -1,12 +1,20 @@
 
 import UIKit
 
-protocol SkeletonCell {
+protocol SkeletonCell: UITableViewCell {
+    associatedtype Model
+
     static var identifier: String { get }
+
+    func configure(model: Model) -> Self
 }
 
 protocol SkeletonListViewModel {
+    associatedtype Model
+
     func start()
+
+    func model(atIndexPath indexPath: IndexPath) -> Model
 }
 
 class HumanListTableViewController: SkeletonableTableViewController<HumanTableViewCell, HumanListViewModel> {
@@ -39,14 +47,6 @@ class HumanListTableViewController: SkeletonableTableViewController<HumanTableVi
         showingSkeleton = humans == nil
 
         tableView.reloadData()
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: HumanTableViewCell = tableView.dequeueReusableCell(withIdentifier: HumanTableViewCell.identifier) as! HumanTableViewCell
-
-        let human = viewModel.human(atIndexPath: indexPath)
-
-        return cell.configure(withSkeleton: human)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
